@@ -1,0 +1,20 @@
+serial_node:
+  ros__parameters:
+    # 串口配置
+    port: "/dev/board_a"
+    baudrate: 115200
+    
+    # 流控制
+    flow_control: "none"
+    
+    # 奇偶校验
+    parity: "none"
+    
+    # 停止位
+    stop_bits: 1
+    
+    # 话题配置
+    pub_topic_data: "/serial/data"          # 发布原始字节数据
+    pub_topic_string: "/serial/string"      # 发布字符串数据
+    sub_topic_cmd: "/serial/cmd"            # 订阅命令（字节数组）
+    sub_topic_string: "/serial/send"        # 订阅字符串命令
